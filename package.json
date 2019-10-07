@@ -1,8 +1,8 @@
 {
   "name": "typedoc-theme-convergence",
   "description": "Customization of the default Typedoc theme for Convergence",
-  "version": "0.6.0",
-  "homepage": "https://https://docs.convergence.io/js-api/",
+  "version": "1.0.0",
+  "homepage": "https://docs.convergence.io/js-api/",
   "main": "bin/plugin.js",
   "files": [
     "bin",
@@ -15,15 +15,18 @@
     "prepublish": "npm run build"
   },
   "author": {
-    "name": "Sebastian Lenz",
-    "url": "http://www.sebastian-lenz.de/"
+    "name": "Convergence Labs",
+    "url": "https://convergencelabs.com"
+  },
+  "publishConfig": {
+    "registry": "https://nexus.dev.convergencelabs.tech/repository/npm-convergence/"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/sebastian-lenz/typedoc-default-themes.git"
+    "url": "https://gitlab.dev.convergencelabs.tech/docs/typedoc-theme-convergence.git"
   },
   "bugs": {
-    "url": "https://github.com/sebastian-lenz/TypeDoc/issues"
+    "url": "https://gitlab.dev.convergencelabs.tech/company/convergence/issues"
   },
   "license": "Apache-2.0",
   "engines": {
@@ -54,8 +57,8 @@
     "typescript": "^3.3.3333"
   },
   "keywords": [
-    "typescript",
-    "documentation",
-    "generator"
+    "typedoc",
+    "typedoc-theme",
+    "convergence"
   ]
 }
