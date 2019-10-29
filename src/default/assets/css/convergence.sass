@@ -6,24 +6,34 @@
   top: 41px
   position: fixed
 
-.convergence-header 
-  top: 0
 
-a.header-brand 
+.header-brand 
   display: flex
   white-space: normal
   padding-right: 35px
   transition: opacity 0.3s
 
-.header-brand img 
-  height: 24px 
-  position: relative 
-  top: 6px 
-  margin-right: 10px
+  img 
+    height: 24px 
+    position: relative 
+    top: 6px 
+    margin-right: 10px
+    
+  .brand-title 
+    display: inline-block
+    line-height: 2.3em
+    margin-right: 10px
+  
+  .version
+    border-radius: 5px
+    background: rgba(0, 0, 0, 0.075)
+    padding: 3px 5px
+    display: inline-block
+    line-height: 1.3em
+    align-self: center
+    font-size: 12px
+    margin-top: 2px
 
-.brand-title 
-  display: inline-block
-  line-height: 2.3em
 
 .brand-copy, .brand-copy a 
   font-family: "Century Gothic", "Helvetica Neue", Helvetica, Arial, sans-serif
@@ -32,6 +42,8 @@ a.header-brand
 
 
 .convergence-header 
+  top: 0
+
   .flex-content 
     display: flex
     flex-direction: row

@@ -1,5 +1,5 @@
 {
-  "name": "typedoc-theme-convergence",
+  "name": "@convergence/typedoc-theme",
   "description": "Customization of the default Typedoc theme for Convergence",
   "version": "1.0.0",
   "homepage": "https://docs.convergence.io/js-api/",
@@ -19,14 +19,8 @@
     "url": "https://convergencelabs.com"
   },
   "publishConfig": {
-    "registry": "https://nexus.dev.convergencelabs.tech/repository/npm-convergence/"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://gitlab.dev.convergencelabs.tech/docs/typedoc-theme-convergence.git"
-  },
-  "bugs": {
-    "url": "https://gitlab.dev.convergencelabs.tech/company/convergence/issues"
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
   },
   "license": "Apache-2.0",
   "engines": {
