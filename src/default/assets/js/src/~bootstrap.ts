@@ -3,7 +3,6 @@
 /// <reference path='./typedoc/components/Comment.ts' />
 /// <reference path='./typedoc/components/Filter.ts' />
 /// <reference path='./typedoc/components/MenuHighlight.ts' />
-/// <reference path='./typedoc/components/MenuSticky.ts' />
 /// <reference path='./typedoc/components/Search.ts' />
 /// <reference path='./typedoc/components/Signature.ts' />
 /// <reference path='./typedoc/components/Toggle.ts' />

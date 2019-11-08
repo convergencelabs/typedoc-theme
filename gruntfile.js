@@ -8,10 +8,13 @@ module.exports = function(grunt)
             themeDefault: {
                 tsconfig: './tsconfig.json',
                 options: {
-                    // Required because of https://github.com/TypeStrong/grunt-ts/issues/432 
+                    // Required because of https://github.com/TypeStrong/grunt-ts/issues/432
                     // Wouldn't be needed if lunr fixed https://github.com/olivernn/lunr.js/issues/324
                     additionalFlags: '--alwaysStrict false'
                 }
+            },
+            themeDefaultHelpers: {
+                tsconfig: 'src/default/helpers/tsconfig.json'
             }
         },
         uglify: {
@@ -106,6 +109,11 @@ module.exports = function(grunt)
                     cwd: 'src/default/partials',
                     src: ['**/*.hbs'],
                     dest: 'bin/minimal/partials'
+                }, {
+                    expand: true,
+                    cwd: 'bin/default/helpers',
+                    src: ['**/*.js'],
+                    dest: 'bin/minimal/helpers',
                 }]
             },
             themeMinimal: {
@@ -151,6 +159,6 @@ module.exports = function(grunt)
     grunt.loadNpmTasks('grunt-ts');
 
     grunt.registerTask('css', ['sass', 'autoprefixer']);
-    grunt.registerTask('js', ['ts:themeDefault', 'uglify']);
-    grunt.registerTask('default', ['copy', 'css', 'js', 'string-replace']);
+    grunt.registerTask('js', ['ts:themeDefault', 'uglify', 'ts:themeDefaultHelpers']);
+    grunt.registerTask('default', ['copy', 'css', 'js', 'copy:themeDefault2Minimal', 'string-replace']);
 };
