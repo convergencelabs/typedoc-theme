@@ -1,3 +1,3 @@
 export function isModule(kindString: string): boolean {
-  return kindString === 'External module';
+  return /external modules?$/i.exec(kindString) != null;
 }

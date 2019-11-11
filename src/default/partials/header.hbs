@@ -58,10 +58,12 @@
             {{#if (hasRelevantFlag "Export")}}
               {{> flag useForClass="Export" useForName="Export"}}&nbsp;
             {{/if}}
-            {{#unless (isModule kindString)}}
-              {{kindString}}&nbsp;
-            {{/unless}}
-            {{name}}
+            {{#if (isModule kindString)}}
+              {{name}}&nbsp;Module
+            {{else}}
+              {{kindString}}&nbsp;{{name}}
+            {{/if}}
+            
             {{#if typeParameters}}
               &lt;
               {{#each typeParameters}}
