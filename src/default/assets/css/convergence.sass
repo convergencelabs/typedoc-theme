@@ -136,7 +136,42 @@
   
 .tsd-breadcrumb 
   li:last-child::after 
-    content: '';
+    content: ''
 
 .tsd-navigation.secondary
   top: calc(.5rem + 76px)
+
+.tsd-navigation.primary
+  ul li a
+    padding-left: 0
+
+  & > ul 
+    border-bottom: none
+
+  li 
+    background-color: rgba(0, 0, 0, 0.01)
+    border-top: none
+    padding: 2px 0 2px 7px
+
+    &.current a
+      font-weight: bold
+
+  li.globals + li > span 
+    padding-top: 0
+  
+  li.modules-label
+    padding: 0.5em 0 1em 9px
+    font-size: 1.1em
+    border-top: none
+
+    & + li 
+      border-top: none
+
+  li:first-child
+    border-top: none
+    padding-bottom: 1em
+    background-color: transparent
+
+  a 
+    display: inline
+    border-left: none

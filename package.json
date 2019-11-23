@@ -1,7 +1,7 @@
 {
-  "name": "@convergence/typedoc-theme",
+  "name": "@convergencelabs/typedoc-theme",
   "description": "Customization of the default Typedoc theme for Convergence",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "homepage": "https://docs.convergence.io/js-api/",
   "main": "bin/plugin.js",
   "files": [
