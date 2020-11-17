@@ -8,10 +8,13 @@
         {{> member.signatures}}
     {{else}}{{#if hasGetterOrSetter}}
         {{> member.getterSetter}}
+    {{else}}{{#if isReference}}
+        {{> member.reference}}
     {{else}}
         {{> member.declaration}}
-    {{/if}}{{/if}}
-     {{#each groups}}
+    {{/if}}{{/if}}{{/if}}
+
+    {{#each groups}}
         {{#each children}}
             {{#unless hasOwnDocument}}
                 {{> member}}

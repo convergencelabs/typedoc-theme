@@ -9,48 +9,49 @@
     "LICENSE"
   ],
   "scripts": {
-    "clean": "rimraf bin",
-    "grunt": "grunt",
-    "build": "npm run clean && npm run grunt",
-    "prepublish": "npm run build"
+    "webpack": "webpack -p",
+    "build": "npm run webpack",
+    "prepublishOnly": "npm run build"
   },
   "author": {
     "name": "Convergence Labs",
     "url": "https://convergencelabs.com"
   },
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/",
-    "access": "public"
+  "repository": {
+    "type": "git",
+    "url": "git://ithub.com:convergencelabs/typedoc-theme.git"
+  },
+  "bugs": {
+    "url": "https://github.com/convergencelabs/typedoc-theme/issues"
   },
   "license": "Apache-2.0",
   "engines": {
     "node": ">= 8"
   },
-  "dependencies": {
-    "backbone": "^1.4.0",
-    "jquery": "^3.4.1",
-    "lunr": "^2.3.8",
-    "underscore": "^1.9.1"
-  },
   "devDependencies": {
-    "@types/backbone": "^1.4.1",
-    "@types/lunr": "^2.3.2",
-    "grunt": "^1.0.4",
-    "grunt-autoprefixer": "^3.0.4",
-    "grunt-cli": "^1.2.0",
-    "grunt-contrib-copy": "^1.0.0",
-    "grunt-contrib-uglify": "^4.0.1",
-    "grunt-contrib-watch": "~1.1.0",
-    "grunt-sass": "^3.1.0",
-    "grunt-string-replace": "^1.0.0",
-    "grunt-ts": "^6.0.0-beta.22",
-    "node-sass": "^4.13.0",
-    "rimraf": "^2.7.1",
-    "typescript": "^3.7.3"
+    "@types/lunr": "^2.3.3",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^6.1.0",
+    "css-loader": "^4.3.0",
+    "file-loader": "^6.1.0",
+    "lunr": "^2.3.9",
+    "mini-css-extract-plugin": "^0.11.2",
+    "resolve-url-loader": "^3.1.1",
+    "sass": "^1.26.10",
+    "sass-loader": "^10.0.2",
+    "ts-loader": "^8.0.3",
+    "typescript": "^4.0.2",
+    "url-loader": "^4.1.0",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-merge": "^5.1.4"
   },
   "keywords": [
     "typedoc",
     "typedoc-theme",
+    "typescript",
+    "documentation",
+    "generator",
     "convergence"
   ]
 }

@@ -1,80 +1,72 @@
 <header>
-  <div class="tsd-page-toolbar convergence-header">
-    <div class="container">
-      <div class="flex-content">
-        <a href="{{relativeURL "index.html"}}" class="header-brand">
-          <img src={{relativeURL "assets/images/convergence-logo.png"}} />
-          <span class="brand-title brand-copy">{{project.name}}</span>
-          <span class="version">$PROJECT_VERSION</span>
-        </a>
-        <div class="links brand-copy">
-          <div class="link">
-            <a href="https://docs.convergence.io/guide/">Dev Guide</a>
-          </div>
-          <div class="link">
-            <a href="https://examples.convergence.io">Examples</a>
-          </div>
-          <div class="link">
-            <a href="https://convergence.io/support/">Support</a>
-          </div>
-        </div>
-      </div>
-      <div class="table-wrap">
-        <div class="table-cell" id="tsd-search" data-index="{{relativeURL "assets/js/search.js"}}" data-base="{{relativeURL "./"}}">
-          <div class="field">
-            <label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
-            <input id="tsd-search-field" type="text" />
-          </div>
-
-          <ul class="results">
-            <li class="state loading">Preparing search index...</li>
-            <li class="state failure">The search index is not available</li>
-          </ul>
-        </div>
-
-        <div class="table-cell" id="tsd-widgets">
-          <div id="tsd-filter">
-            <a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
-            <div class="tsd-filter-group">
-              <input type="checkbox" id="tsd-filter-inherited" checked />
-              <label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+    <div class="tsd-page-toolbar convergence-header">
+        <div class="container">
+            <div class="flex-content">
+                <a href="{{relativeURL "index.html"}}" class="header-brand">
+                    <img src={{relativeURL "assets/images/convergence-logo.png"}} />
+                    <span class="brand-title brand-copy">{{project.name}}</span>
+                    <span class="version">$PROJECT_VERSION</span>
+                </a>
+                <div class="links brand-copy">
+                    <div class="link">
+                        <a href="https://docs.convergence.io/guide/">Dev Guide</a>
+                    </div>
+                    <div class="link">
+                        <a href="https://examples.convergence.io">Examples</a>
+                    </div>
+                    <div class="link">
+                        <a href="https://convergence.io/support/">Support</a>
+                    </div>
+                </div>
             </div>
-          </div>
+            <div class="table-wrap">
+                <div class="table-cell" id="tsd-search" data-index="{{relativeURL "assets/js/search.json"}}" data-base="{{relativeURL "./"}}">
+                    <div class="field">
+                        <label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+                        <input id="tsd-search-field" type="text" />
+                    </div>
 
-          <a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+                    <ul class="results">
+                        <li class="state loading">Preparing search index...</li>
+                        <li class="state failure">The search index is not available</li>
+                    </ul>
+                </div>
+
+                <div class="table-cell" id="tsd-widgets">
+                    <div id="tsd-filter">
+                        <a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+                        <div class="tsd-filter-group">
+                            <input type="checkbox" id="tsd-filter-inherited" checked />
+                            <label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+
+                            {{#unless settings.excludeExternals}}
+                                <input type="checkbox" id="tsd-filter-externals" checked />
+                                <label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+                            {{/unless}}
+                        </div>
+                    </div>
+                    <a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
+    <div class="tsd-page-title">
+        <div class="container">
+            <ul class="tsd-breadcrumb">
+                {{#with model}}{{> breadcrumb}}{{/with}}
+            </ul>
+            <h1>{{#compact}}
+                {{model.kindString}}&nbsp;
+                {{model.name}}
+                {{#if model.typeParameters}}
+                    &lt;
+                    {{#each model.typeParameters}}
+                        {{#if @index}},&nbsp;{{/if}}
+                        {{name}}
+                    {{/each}}
+                    &gt;
+                {{/if}}
+            {{/compact}}</h1>
+        </div>
     </div>
-  </div>
-  <div class="tsd-page-title">
-    <div class="container">
-      <ul class="tsd-breadcrumb">
-        {{#with model}}{{> breadcrumb}}{{/with}}
-      </ul>
-      <h1>
-        {{#compact}}
-          {{#with model}}
-            {{#if (hasRelevantFlag "Export")}}
-              {{> flag useForClass="Export" useForName="Export"}}&nbsp;
-            {{/if}}
-            {{#if (isModule kindString)}}
-              {{name}}&nbsp;Module
-            {{else}}
-              {{kindString}}&nbsp;{{name}}
-            {{/if}}
-            
-            {{#if typeParameters}}
-              &lt;
-              {{#each typeParameters}}
-                {{#if @index}},&nbsp;{{/if}}
-                {{name}}
-              {{/each}}
-              &gt;
-            {{/if}}
-          {{/with}}
-        {{/compact}}
-      </h1>
-    </div>
-  </div>
 </header>
