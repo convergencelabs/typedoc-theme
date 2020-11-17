@@ -44,6 +44,15 @@ const config = {
                     },
                 ],
             },
+            {
+                test: /\.ttf$/,
+                loader: 'file-loader',
+                options: {
+                    outputPath: 'default/assets/fonts',
+                    publicPath: '../fonts',
+                    name: '[name].[ext]',
+                },
+            },
         ]
     },
 
@@ -54,6 +63,11 @@ const config = {
                     context: path.resolve(__dirname, 'src'),
                     from: 'plugin.js',
                     to: path.resolve(__dirname, 'bin'),
+                },
+                {
+                    context: path.resolve(__dirname, 'src/default/assets/images'),
+                    from: '*.png',
+                    to: path.resolve(__dirname, 'bin/default/assets/images'),
                 },
             ],
         }),

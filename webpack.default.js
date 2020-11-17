@@ -16,7 +16,7 @@ const config = {
     module: {
         rules: [
             {
-                test: /\.png$/,
+                test: /\.(png|svg)$/,
                 loader: 'file-loader',
                 options: {
                     outputPath: 'default/assets/images',

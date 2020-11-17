@@ -17,7 +17,7 @@ const config = {
     module: {
         rules: [
             {
-                test: /\.png$/,
+                test: /\.(png|svg)$/,
                 loader: 'url-loader',
             },
         ]
