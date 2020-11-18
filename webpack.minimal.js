@@ -24,7 +24,6 @@ const config = {
     },
 
     plugins: [
-        new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
             filename: 'minimal/assets/css/main.css',
         }),

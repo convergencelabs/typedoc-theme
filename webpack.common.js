@@ -1,6 +1,7 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 
 const config = {
     mode: 'development',
@@ -57,6 +58,7 @@ const config = {
     },
 
     plugins: [
+        new CleanWebpackPlugin(),
         new CopyPlugin({
             patterns: [
                 {
