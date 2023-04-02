@@ -1,6 +1,6 @@
 # Convergence TypeDoc theme
 
-This theme is a minor customization of the [default Typedoc themes](https://github.com/TypeStrong/typedoc-default-themes). It was created alongside the [Custom Modules Plugin](https://github.com/convergencelabs/typedoc-plugin-custom-modules) to make the Convergence Javascript client [API docs](https://docs.convergence.io/js-api/) easier to navigate.
+This theme is a minor customization of the [default Typedoc themes](https://github.com/TypeStrong/typedoc-default-themes). It was created alongside the [Custom Modules Plugin](https://github.com/convergencelabs/typedoc-plugin-custom-modules) to make the Convergence Javascript client [API docs](https://api-docs.convergence.io/) easier to navigate.
 
 ## Usage
 
